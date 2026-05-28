@@ -10,6 +10,16 @@ app_license = "mit"
 
 # required_apps = []
 
+# fixtures = ["Property Setter"]
+fixtures = [
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["module", "=", "Scrollable List View"]
+        ]
+    }
+]
+
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
@@ -26,7 +36,11 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/scrollable_list_view/css/scrollable_list_view.css"
-# app_include_js = "/assets/scrollable_list_view/js/scrollable_list_view.js"
+app_include_js = [
+    "/assets/scrollable_list_view/js/scrollable_list_view.js",
+    "/assets/scrollable_list_view/js/dashboard_link_new_page.js",
+    "/assets/scrollable_list_view/js/list_view_id.js"
+    ]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/scrollable_list_view/css/scrollable_list_view.css"
