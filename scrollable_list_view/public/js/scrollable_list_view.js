@@ -3,7 +3,7 @@
     function inject_list_scroll_styles() {
         if (window.innerWidth <= 768) return;
 
-        const old = document.getElementById('nido-list-scroll');
+        const old = document.getElementById('list-scroll');
         if (old) old.remove();
 
         const SUBJECT_W = 200;
@@ -11,7 +11,7 @@
         const RIGHT_W   = 180;
 
         const style = document.createElement('style');
-        style.id = 'nido-list-scroll';
+        style.id = 'list-scroll';
         style.innerHTML = `
 
             .frappe-list {
@@ -111,7 +111,7 @@
     }
 
     function remove_list_scroll_styles() {
-        const old = document.getElementById('nido-list-scroll');
+        const old = document.getElementById('list-scroll');
         if (old) old.remove();
     }
 
@@ -143,14 +143,6 @@
             remove_list_scroll_styles();
         }
     });
-
-    // Handle initial page load if already on a list view
-    // frappe.ready(function () {
-    //     const route = frappe.get_route();
-    //     if (route && route[0] === 'List') {
-    //         inject_list_scroll_styles();
-    //     }
-    // });
 
     // Handle initial page load if already on a list view
     function on_ready(fn) {
